@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Android Demo</string>
+    <string name="enter_any_keyword">Enter any keyword</string>
+    <string name="network_error">Network Error</string>
+    <string name="no_result">No matched result</string>
+</resources>

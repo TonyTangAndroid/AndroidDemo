@@ -1,0 +1,46 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+
+    //寻找项目依赖的各种jar包以及aar文件的寻找路径。
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+
+    }
+
+    //指定各种gradle插件的寻找地址
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'com.jakewharton.hugo:hugo-plugin:1.2.1'
+        classpath 'me.tatarka:gradle-retrolambda:3.5.0'
+        classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:0.6.2'
+    }
+}
+
+
+ext.libraries = [recyclerview              : "com.android.support:recyclerview-v7:${ANDROID_SUPPORT_VERSION}",
+                 appcompat                 : "com.android.support:appcompat-v7:${ANDROID_SUPPORT_VERSION}",
+                 cardview                  : "com.android.support:cardview-v7:${ANDROID_SUPPORT_VERSION}",
+                 design                    : "com.android.support:design:${ANDROID_SUPPORT_VERSION}",
+                 support_v13               : "com.android.support:support-v13:${ANDROID_SUPPORT_VERSION}",
+                 retrofit                  : "com.squareup.retrofit2:retrofit:${RETROFIT_VERESION}",
+                 okhttp_urlconnection      : "com.squareup.okhttp3:okhttp-urlconnection:${OKHTTP_VERESION}",
+                 okhttp                    : "com.squareup.okhttp3:okhttp:${OKHTTP_VERESION}",
+                 okhttp_logging_interceptor: "com.squareup.okhttp3:logging-interceptor:${OKHTTP_VERESION}",
+                 converter_gson            : "com.squareup.retrofit2:converter-gson:${RETROFIT_VERESION}",
+                 adapter_rxjava2            : "com.squareup.retrofit2:adapter-rxjava2:${RETROFIT_VERESION}",
+                 support_annotations       : "com.android.support:support-annotations:${ANDROID_SUPPORT_VERSION}"
+
+]
+
+
+
+allprojects {
+    //寻找项目依赖的各种jar包以及aar文件的寻找路径。
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+apply from: 'versioning.gradle'
