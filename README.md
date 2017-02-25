@@ -1,1 +1,1 @@
-Demo for heroku.
+An android demo for Rxjava2, retrofit2 and OkHttp3
